@@ -952,15 +952,21 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	position: relative;
 }
 .skill-bars li strong {
-	position: absolute;
+	/* position: absolute; */
 	left: 0;
 	top: -3rem;
 	font-family: "poppins-bold", sans-serif;
 	color: #313131;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	letter-spacing: .2rem;
-	font-size: 1.5rem;
+	/* font-size: 1.5rem; */
 	line-height: 2.4rem;
+}
+.skill-bars li strong span {
+	font-family: "lora-italic", serif;
+	font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
 }
 .skill-bars li .progress {
 	background: #313131;
@@ -970,7 +976,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .skill-bars li .progress span {
 	position: absolute;
 	right: 0;
-	top: -3.6rem;
+	top: -3.0rem;
 	display: block;
 	font-family: "poppins-regular", sans-serif;
 	color: white;
