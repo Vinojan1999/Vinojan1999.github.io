@@ -1089,26 +1089,28 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- 
 */
- .top-bar.scrolled {
-	background-color:#100f0fab !important;
-	transition: background-color 200ms linear;
-  }
+.top-bar.scrolled {
+/* background-color:#100f0fab !important; */
+transition: background-color 200ms linear;
+}
+
 
 header {
 	position: fixed;
 	width: 100%;
-	min-height: 66px;
+	height: 58px;
 	z-index: 600;
+	background-color: #100f0fe3 !important;
 }
 header .row {
 	position: relative;
-	min-height: 66px;
+	min-height: 58px;
 }
 header .top-bar {
 	display: block;
 	/* background: #000000; */
 	min-width: 220px;
-	min-height: 66px;
+	/* min-height: 66px; */
 	position: center;
 	left: 90px;
 	top: 0;
@@ -1143,17 +1145,15 @@ header .logo a {
  i.fa.fa-home {
 	 float: left;
 	 width: 40px;
-	 height: 40px;
 	 margin-left: 10px;
-	 margin-right: 20px;
-	 margin-top: -2px;
+	 margin-top: -8px;
 	 display: block;
 	 position: relative;
  }
 .menu-toggle {
 	float: right;
 	width: 40px;
-	height: 40px;
+	height: 30px;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 13px;
@@ -2455,6 +2455,12 @@ header .logo a {
 }
 .contact-info h5 {
 	color: #FF0077;
+}
+.contact-info .col-four p span {
+	color: #6e6e6e;
+}
+.contact-info .col-four p span:hover {
+	color: #ffffff;
 }
 
 /**
