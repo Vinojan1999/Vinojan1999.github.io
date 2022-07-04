@@ -281,20 +281,31 @@ $(function () {
 	/*---------------------------------------------------- */
 	/*	Send Email js
 	------------------------------------------------------ */
-	// function sendMail(){
-	// 	var tempMail = {
-	// 		user_name: document.getElementById("contactName").value,
-	// 		user_mail: document.getElementById("contactEmail").value,
-	// 		subject: document.getElementById("contactSubject").value,
-	// 		message: document.getElementById("contactMessage").value,
-	// 	}
+	function send_mail(){
+		document.querySelector('.loading').classList.add('display');
+	
+		var temp = {
+			user_name: document.getElementById('userName').value,
+			user_mail: document.getElementById('userMail').value,
+			msg: document.getElementById('message').value,
+		};
+	
+		emailjs.send('service_ac-kln', 'template_ac-kln', temp)
+		.then(function(res){
+			document.getElementById("userName").value = "";
+			document.getElementById("userMail").value = "";
+			document.getElementById("message").value = "";
+			document.querySelector('.loading').classList.remove('display');
+			document.querySelector('.sent-message').classList.add('display');
+			console.log("Success", res.status);
+		}).catch((error)=> {
+			this.querySelector('.loading').classList.remove('display');
+			this.querySelector('.error-message').classList.add('display');
+		});
+	}
 
-	// 	emailjs.send('service_vino00', 'template_zor5lrc', tempMail)
-	// 	.then(function(res){
-	// 		console.log("Success", res.status);
-	// 	})
-	// }
-
+	// Service ID = 'service_vino00'
+	// Template ID = 'template_zor5lrc'
 
  	/*----------------------------------------------------- */
   	/* Back to top
